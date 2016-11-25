@@ -319,7 +319,7 @@ class DzrBot(Bot):
 
         if parse_result['new_level']:
             self.sendMessage(channel_id, 'Новый уровень')
-            self.send_ko(channel_id)
+            #self.send_ko(channel_id)
 
             # Сбрасываем паттерн
             self.set_data('code_pattern', None)
@@ -327,8 +327,8 @@ class DzrBot(Bot):
         for tip in parse_result['tip_list']:
             self.sendMessage(channel_id, "Подсказка: {}".format(tip['text']))
 
-        if parse_result['new_code']:
-            self.send_ko(channel_id)
+        #if parse_result['new_code']:
+            #self.send_ko(channel_id)
 
         if parse_result['new_spoiler']:
             self.sendMessage(channel_id, 'Открыт спойлер')
