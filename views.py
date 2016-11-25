@@ -105,7 +105,7 @@ def sector_text(sector):
     Вьюха списка KO в виде текста
     Принимает список кодов в формате [{'ko': '1', 'taken': True}, ...]
     """
-    code_list = for [x for x in sector['code_list'] if !x['taken']]
+    code_list = [x for x in sector['code_list'] if not(x['taken'])]
     l = len(code_list)
     rows = 5 if l <= 10 else 10  # Сколько элементов в колонке.
     cols = 2  # Колонок всегда 2
